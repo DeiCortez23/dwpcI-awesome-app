@@ -1,0 +1,25 @@
+{
+  "name": "dwpci-awesome-app-2024a",
+  "version": "0.0.0",
+  "description": "Proyecto de la clase de la materia  de DWPCI 2024A",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeiCortez23/dwpcI-awesome-app.git"
+  },
+  "keywords": [
+    "Express",
+    "ITGAM",
+    "DWPCI",
+    "JavaScript"
+  ],
+  "author": "@DavidCortez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DeiCortez23/dwpcI-awesome-app/issues"
+  },
+  "homepage": "https://github.com/DeiCortez23/dwpcI-awesome-app#readme"
+}
