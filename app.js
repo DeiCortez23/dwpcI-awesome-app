@@ -1,20 +1,28 @@
-// Importando el modulo http
-import http from 'http';
 // Importando Express
 import express from 'express';
+
+// Importando el enrutador
+import adminRouter from './routes/admin.route.js';
+import shopRouter from './routes/shop.route.js';
 
 // Creando la instancia de express
 // que basicamente es un middleware
 const app = express();
 
-// Asignando el middleware de express
-// al servidor http
-const server = http.createServer(app);
+// Se registra el middleware del body-parser
+app.use(express.urlencoded({ extended: true }));
+
+// Se agrega ruta de administrador
+app.use(adminRouter);
+// Se agrega ruta shop
+app.use(shopRouter);
+
 
 // Definiendo puertos
 const port = 3000;
 const ip = "0.0.0.0"
+
 // Arrancando el servidor
-server.listen(port, ip, () => {
-  console.log(`🤖 SERvidor en http://localhost:${port}`);
+app.listen(port, ip, () => {
+  console.log(`🤖 Sirviendo en http://localhost:${port}`);
 });
