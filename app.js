@@ -33,3 +33,10 @@ const ip = "0.0.0.0"
 app.listen(port, ip, () => {
   console.log(`🤖 Sirviendo en http://localhost:${port}`);
 }); 
+app.use(express.urlencoded({ extended: true }));
+
+// Se agrega ruta de administrador
+app.use(adminRouter);
+app.use('/admin', adminRouter);
+// Se agrega ruta shop
+app.use(shopRouter);
