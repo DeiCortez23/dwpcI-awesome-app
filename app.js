@@ -1,5 +1,6 @@
 // Importando Express
 import express from 'express';
+import httpStatus from 'http-status';
 
 // Importando el enrutador
 import adminRouter from './routes/admin.route.js';
@@ -17,6 +18,12 @@ app.use(adminRouter);
 // Se agrega ruta shop
 app.use(shopRouter);
 
+// Registrando el middleware para el error
+// 404
+app.use((req, res, next) => {
+  res.status(httpStatus.NOT_FOUND)
+  .send("<h1 style='color: crimson;'>🤷‍♂️ Not found 🤷‍♂️</h1>")
+});
 
 // Definiendo puertos
 const port = 3000;
