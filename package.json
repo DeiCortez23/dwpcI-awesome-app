@@ -3,11 +3,14 @@
   "version": "0.0.0",
   "description": "Proyecto de la clase de la materia  de DWPCI 2024A",
   "type": "module",
-  "engines": {"node" :"20.x", "npm":"10.x"},
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
+  },
   "main": "app.js",
   "scripts": {
     "start": "node ./app.js",
-    "dev" : "node --watch ./app.js"
+    "dev": "node --watch ./app.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +29,7 @@
   },
   "homepage": "https://github.com/DeiCortez23/dwpcI-awesome-app#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "http-status": "^1.7.4"
   }
 }

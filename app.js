@@ -32,4 +32,4 @@ const ip = "0.0.0.0"
 // Arrancando el servidor
 app.listen(port, ip, () => {
   console.log(`🤖 Sirviendo en http://localhost:${port}`);
-});
+}); 
